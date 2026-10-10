@@ -1,0 +1,5 @@
+present  n= 203  NCC mean 0.296  median 0.286  p90 0.452  max 0.630
+absent   n= 565  NCC mean 0.235  median 0.205  p90 0.383  max 0.704
+AUC of raw waveform NCC: 0.6626
+
+reuse verdict: no reuse -> genuine speaker-ID problem
