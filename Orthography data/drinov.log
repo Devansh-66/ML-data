@@ -1,0 +1,33 @@
+[   0.0s] train (1076, 3) test (112, 2)
+[   0.0s] aligning training pairs...
+[   4.4s] label classes 161 | edit coverage 0.9740 | total edits 31531
+[   4.4s] char vocab 138
+Traceback (most recent call last):
+  File "C:\Users\Devansh Rajput\Downloads\Drinov Orthography Safe Repair\drinov.py", line 274, in <module>
+    m = train_model(tr_i, 100+f, W, min(tval, T0+TIME_LIMIT))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devansh Rajput\Downloads\Drinov Orthography Safe Repair\drinov.py", line 223, in train_model
+    lo = m(xb)
+         ^^^^^
+  File "C:\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Devansh Rajput\Downloads\Drinov Orthography Safe Repair\drinov.py", line 197, in forward
+    z = z + s.do(torch.nn.functional.gelu(n(c(z))))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\torch\nn\modules\dropout.py", line 73, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\torch\nn\functional.py", line 1443, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: [enforce fail at alloc_cpu.cpp:117] data. DefaultCPUAllocator: not enough memory: you tried to allocate 3760128 bytes.
